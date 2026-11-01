@@ -83,7 +83,18 @@
   const css = (c) => `rgb(${c[0] | 0} ${c[1] | 0} ${c[2] | 0})`;
   let halte = [];
   const zustand = {};
+  /* Auf kleinen Schirmen richten sich Notenlinien und Bogen nach der Höhe des Texts */
+  let bogenOben = 48;
+  function auftaktLage() {
+    if (!motion || !isMobile()) return;
+    const text = $('.unterzeile'), szene = $('#auftakt');
+    const abstand = +szene.dataset.gapM * 2 + 14;
+    const y = text.offsetTop + text.offsetHeight + abstand;
+    bogenOben = Math.min(66, (y + abstand) / $('#auftakt .buehne').clientHeight * 100);
+    [szene, $('#auftakt .marke')].forEach((el) => { el.dataset.yM = (y / innerHeight).toFixed(3); });
+  }
   function tabelle() {
+    auftaktLage();
     const m = isMobile();
     const zahl = (el, k, f) => { const v = el.dataset[k + (m ? 'M' : '')] ?? el.dataset[k]; return v === undefined ? f : +v; };
     /* Die helle Schrift im Auftakt gilt nur, solange das Foto dahinter liegt */
@@ -409,12 +420,12 @@
     const { gross } = ctx.conditions;
 
     /* Auftakt */
-    const auf = gsap.timeline({ scrollTrigger: { trigger: '#auftakt', start: 'top top', end: 'bottom bottom', scrub: true } });
+    const auf = gsap.timeline({ scrollTrigger: { trigger: '#auftakt', start: 'top top', end: 'bottom bottom', scrub: true, invalidateOnRefresh: true } });
     auf.to('.h-a .zeile > span', { yPercent: -110, stagger: 0.02, duration: 0.2, ease: 'power2.in' }, 0)
       .to('.unterzeile, .ton-tipp', { autoAlpha: 0, duration: 0.1 }, 0)
-      .fromTo('.bogen', { clipPath: gross ? 'inset(17% 7% 0% 57% round 22vw 22vw 0px 0px)' : 'inset(48% 14% 0% 14% round 36vw 36vw 0px 0px)' },
+      .fromTo('.bogen', { clipPath: () => (gross ? 'inset(17% 7% 0% 57% round 22vw 22vw 0px 0px)' : `inset(${bogenOben}% 14% 0% 14% round 36vw 36vw 0px 0px)`) },
         { clipPath: 'inset(0% 0% 0% 0% round 0vw 0vw 0px 0px)', duration: 0.55, ease: 'power2.inOut' }, 0.05)
-      .fromTo('.bogen img', { x: gross ? '26vw' : 0, y: gross ? 0 : '30vh', scale: 1.16 }, { x: 0, y: 0, scale: 1, duration: 0.55, ease: 'power2.inOut' }, 0.05)
+      .fromTo('.bogen img', { x: gross ? '26vw' : 0, y: () => (gross ? 0 : `${bogenOben - 18}vh`), scale: 1.16 }, { x: 0, y: 0, scale: 1, duration: 0.55, ease: 'power2.inOut' }, 0.05)
       .to('.bogen-schatten', { opacity: 1, duration: 0.2 }, 0.42)
       .set('.h-b', { visibility: 'visible' }, 0.5)
       .fromTo('.h-b', { yPercent: 60, opacity: 0 }, { yPercent: 0, opacity: 1, duration: 0.2, ease: 'power2.out' }, 0.52)
@@ -528,6 +539,7 @@
   });
 
   function aktualisieren() { groesse(); tabelle(); notenRechnen(); }
+  ScrollTrigger.addEventListener('refreshInit', auftaktLage);
   ScrollTrigger.addEventListener('refresh', aktualisieren);
   document.fonts?.ready.then(() => ScrollTrigger.refresh());
   addEventListener('load', () => ScrollTrigger.refresh());

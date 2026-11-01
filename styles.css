@@ -255,7 +255,7 @@ form .knopf { justify-self: start; }
   .ton.kompakt { padding: 12px; }
   .ton.kompakt .ton-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 
-  h1 { font-size: 15vw; }
+  h1 { font-size: min(15vw, 8svh); }
   .motion .bogen { clip-path: inset(48% 14% 0% 14% round 36vw 36vw 0px 0px); }
   .motion .auftakt-text { padding-top: 76px; }
   .motion .h-b { font-size: 15vw; }
