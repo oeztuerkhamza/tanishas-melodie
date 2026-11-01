@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tanishas Melodie: Hochzeitssängerin in Freiburg und am Kaiserstuhl</title>
+<meta name="description" content="Tanisha singt eure Trauung und euren Sektempfang in Freiburg, am Kaiserstuhl und in Baden-Württemberg, mit den Liedern, die zu euch passen.">
+<!-- Entwurf: vor dem Livegang entfernen -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#D8E2E3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='12' cy='24' rx='7' ry='5' fill='%232B1A27' transform='rotate(-20 12 24)'/%3E%3Crect x='17.5' y='4' width='2' height='20' fill='%232B1A27'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/bodoni-moda-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/empore-1500.webp" as="image">
+<link rel="stylesheet" href="styles.css">
+<script>
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+</script>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+<canvas id="saiten" aria-hidden="true"></canvas>
+
+<header class="kopf">
+  <a class="logo" href="#auftakt" aria-label="Tanishas Melodie, zum Seitenanfang"></a>
+  <button class="menu-knopf" type="button" aria-expanded="false" aria-controls="navigation">Menü</button>
+  <nav id="navigation" aria-label="Hauptnavigation">
+    <a href="#ablauf">So läuft es ab</a>
+    <a href="#hoerproben">Hörproben</a>
+    <a href="#ueber">Über mich</a>
+    <a href="#preise">Preise</a>
+    <a href="#empfehlungen">Empfehlungen</a>
+  </nav>
+  <a class="knopf knopf-klein" href="#anfrage">Datum anfragen</a>
+</header>
+
+<button class="ton" type="button" aria-pressed="false">
+  <svg viewBox="0 0 24 16" aria-hidden="true"><path d="M0 2h24M0 5h24M0 8h24M0 11h24M0 14h24" fill="none" stroke="currentColor"/></svg>
+  <span class="ton-text">Melodie</span>
+</button>
+
+<main id="inhalt">
+
+  <!-- Auftakt: Der Bogen öffnet sich zur Empore -->
+  <section id="auftakt" class="szene" data-bg="#D8E2E3" data-ink="#2B1A27" data-line="#2B1A27" data-y="0.84" data-y-m="0.435" data-gap="20" data-gap-m="9" data-amp="0" data-alpha="0.8" data-notes="1">
+    <div class="marke" style="top:30%" data-bg="#D8E2E3" data-ink="#FFF4E2" data-line="#2B1A27" data-y="0.84" data-y-m="0.435" data-gap="20" data-gap-m="9" data-amp="0" data-alpha="0.8" data-notes="1"></div>
+    <div class="buehne">
+      <div class="bogen">
+        <img src="assets/img/empore-1500.webp" srcset="assets/img/empore-960.webp 960w, assets/img/empore-1500.webp 1500w" sizes="100vw" width="1500" height="938" fetchpriority="high"
+             alt="Tanisha singt mit geschlossenen Augen und Mikrofon auf der hölzernen Empore einer Kirche.">
+        <div class="bogen-schatten"></div>
+      </div>
+      <div class="auftakt-text">
+        <h1>
+          <span class="h-a">
+            <span class="zeile"><span>Eure Liebe</span></span>
+            <span class="zeile"><span>erzählt eine</span></span>
+            <span class="zeile"><span>Geschichte.</span></span>
+          </span>
+          <span class="h-b">Musik macht sie hörbar.</span>
+        </h1>
+        <p class="unterzeile">Hochzeitsgesang in Freiburg, am Kaiserstuhl und in ganz Baden-Württemberg.</p>
+        <p class="ton-tipp">Schaltet die Melodie ein und scrollt langsam: Der Hochzeitsmarsch spielt Note für Note mit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Willkommen -->
+  <section id="willkommen" data-bg="#BAC5A5" data-ink="#2B1A27" data-line="#3F4A2C" data-y="0.5" data-gap="26" data-amp="60" data-alpha="0.2" data-notes="0.2">
+    <div class="spalten">
+      <div class="willkommen-text">
+        <p class="schrift">Schön, dass ihr da seid.</p>
+        <p class="vorlesen">Ich bin Tanisha und singe dort, wo zwei Menschen Ja zueinander sagen. Mit sanfter Stimme und den Liedern eurer Wahl bekommt eure Trauung noch mehr Gefühl.</p>
+        <a class="pfeil-link" href="#preise">Preise und Angebote ansehen</a>
+      </div>
+      <figure class="bogen-bild garten">
+        <img src="assets/img/garten-800.webp" srcset="assets/img/garten-800.webp 800w, assets/img/garten-1332.webp 1332w" sizes="(max-width: 900px) 90vw, 42vw" width="1332" height="2000" loading="lazy"
+             alt="Tanisha im geblümten Kleid singt im Garten hinter einem hölzernen Notenständer, Sonnenlicht fällt durch die Bäume.">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Vier Takte bis zu eurem Lied -->
+  <section id="ablauf" data-bg="#F2DDD1" data-ink="#2B1A27" data-line="#7D4B3C" data-y="0.5" data-gap="30" data-amp="80" data-alpha="0.2" data-notes="0.15">
+    <div class="ablauf-raster">
+      <figure class="ablauf-bild">
+        <img src="assets/img/kerzen-800.webp" srcset="assets/img/kerzen-800.webp 800w, assets/img/kerzen-1334.webp 1334w" sizes="(max-width: 900px) 100vw, 45vw" width="1334" height="2000" loading="lazy"
+             alt="Tanisha in Jeansjacke und rosafarbenem Rock singt in einer hellen Kirche, im Vordergrund unscharfe Kerzen und ein Holzkreuz.">
+      </figure>
+      <div class="ablauf-inhalt">
+        <h2>Vier Takte bis zu eurem Lied</h2>
+        <ol class="takte">
+          <li>
+            <span class="takt-nr">Takt 1</span>
+            <h3>Ihr schreibt mir</h3>
+            <p>Datum, Ort und ein paar Zeilen zu eurem Tag reichen. Ich melde mich so schnell wie möglich.</p>
+          </li>
+          <li>
+            <span class="takt-nr">Takt 2</span>
+            <h3>Wir lernen uns kennen</h3>
+            <p>Bei einem Kaffee oder im Videocall. Die Harmonie zwischen uns soll stimmen, und ein vertrautes Gesicht nimmt euch am großen Tag etwas von der Aufregung.</p>
+          </li>
+          <li>
+            <span class="takt-nr">Takt 3</span>
+            <h3>Wir wählen eure Lieder</h3>
+            <p>Passend zu euch und zum Stil der Feier: locker bei der freien Trauung, traditionell in der Kirche oder feierlich auf dem Standesamt.</p>
+          </li>
+          <li>
+            <span class="takt-nr">Takt 4</span>
+            <h3>Ich singe für euch</h3>
+            <p>Mikrofon und Box bringe ich selbst mit, abgestimmt auf meine Musik. Das funktioniert im Saal genauso wie auf der Wiese ohne Stromanschluss.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hörproben: horizontal über die Notenzeile -->
+  <section id="hoerproben" class="quer" data-bg="#5A3416" data-ink="#FFF4E2" data-line="#EDBD78" data-y="0.9" data-gap="11" data-gap-m="8" data-amp="0" data-alpha="0.7" data-notes="1">
+    <div class="quer-buehne">
+      <div class="quer-spur">
+        <article class="tafel tafel-start">
+          <h2>Eine feste Setlist sucht ihr bei mir vergebens.</h2>
+          <p>Eure Auswahl darf so eigen sein wie ihr. Ihr seid AC/DC-Fans oder singt im Auto am liebsten Country? Dann machen wir daraus eure Trauungsmusik, und ihr erkennt euch im Lied wieder.</p>
+        </article>
+
+        <article class="tafel lied">
+          <div class="video" data-yt="sfPUa47gQvA" data-titel="Kann es wirklich Liebe sein?">
+            <img src="assets/img/garten-800.webp" width="1332" height="2000" alt="" loading="lazy" class="lied-bild" style="object-position:60% 30%">
+          </div>
+          <div class="lied-text">
+            <h3>Kann es wirklich Liebe sein?</h3>
+            <p>Der Disney-Klassiker hält den Moment für einen Augenblick an.</p>
+          </div>
+        </article>
+
+        <article class="tafel lied">
+          <div class="video" data-yt="cNN7N1p3AOw" data-titel="A Thousand Years">
+            <img src="assets/img/kerzen-800.webp" width="1334" height="2000" alt="" loading="lazy" class="lied-bild" style="object-position:60% 35%">
+          </div>
+          <div class="lied-text">
+            <h3>A Thousand Years</h3>
+            <p>Ruhig und wie gemacht für die Minuten vor dem Ja-Wort. Hier kommen auch den letzten Gästen die Tränen.</p>
+          </div>
+        </article>
+
+        <article class="tafel lied">
+          <div class="video" data-yt="yi6_9h-qeT8" data-titel="Hallelujah">
+            <img src="assets/img/saal-800.webp" width="1332" height="2000" alt="" loading="lazy" class="lied-bild" style="object-position:40% 42%">
+          </div>
+          <div class="lied-text">
+            <h3>Hallelujah</h3>
+            <p>Für den Einzug oder den Moment vor dem Ja-Wort. Gänsehaut für das Brautpaar und alle Gäste.</p>
+          </div>
+        </article>
+
+        <article class="tafel tafel-ende">
+          <p class="schrift">Noch mehr hören?</p>
+          <a class="knopf" href="https://www.instagram.com/tanishasmelodie" rel="noopener">Hörproben auf Instagram</a>
+          <a class="pfeil-link" href="https://www.youtube.com/@tanishasmelodie" rel="noopener">YouTube-Kanal öffnen</a>
+        </article>
+      </div>
+      <p class="video-hinweis">Beim Abspielen wird ein Video von YouTube geladen.</p>
+    </div>
+  </section>
+
+  <!-- Über mich -->
+  <section id="ueber" data-bg="#AEB5B9" data-ink="#2B1A27" data-line="#2B1A27" data-y="0.5" data-gap="24" data-amp="50" data-alpha="0.14" data-notes="0.12">
+    <div class="ueber-raster">
+      <figure class="ueber-bild">
+        <img src="assets/img/portrait-800.webp" srcset="assets/img/portrait-800.webp 800w, assets/img/portrait-1333.webp 1333w" sizes="(max-width: 900px) 92vw, 44vw" width="1333" height="2000" loading="lazy"
+             alt="Porträt von Tanisha: Sie lacht in die Kamera, trägt einen schwarzen Rollkragenpullover und helle Jeans.">
+        <p class="name-gross schrift" aria-hidden="true">Tanisha</p>
+      </figure>
+      <div class="ueber-text">
+        <h2>Ich weiß, wie sich euer Tag anfühlt.</h2>
+        <p>Ich bin 26 und lebe mit meinem Mann und unserer Katze in Freiburg. Ich koche und reise gern, bin großer Taylor-Swift-Fan und finde kaum etwas schöner als Hochzeiten. Angefangen hat alles bei den Trauungen befreundeter Paare. Aus dem Singen für Freunde wurde meine Leidenschaft.</p>
+        <p class="jahr"><span>2024</span> habe ich nach fast acht gemeinsamen Jahren meinen besten Freund geheiratet.</p>
+        <p>Den Stress und die vielen Entscheidungen kenne ich also gut. Als wir uns später unser Hochzeitsvideo ansahen, liefen die Tränen genau an der Stelle, an der meine Freundinnen für uns sangen. Dieses Gefühl wünsche ich auch euch. Deshalb soll es zwischen uns passen, und ihr sollt euch am Tag selbst freuen, mich zu sehen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meine Melodie: von der Trauung zum Sektempfang -->
+  <section id="melodie" class="szene" data-bg="#EFC8BE" data-ink="#2B1A27" data-line="#7D3F3A" data-y="0.5" data-gap="20" data-amp="30" data-alpha="0.2" data-notes="0.2">
+    <div class="marke" style="top:42%" data-bg="#F49A67" data-ink="#2B1A27" data-line="#2B1A27" data-y="0.5" data-gap="20" data-amp="30" data-alpha="0.2" data-notes="0.2"></div>
+    <div class="buehne melodie-buehne">
+      <figure class="melodie-bild">
+        <img class="m-a" src="assets/img/empore-960.webp" width="960" height="600" loading="lazy" alt="Tanisha singt auf der Kirchenempore.">
+        <img class="m-b" src="assets/img/saal-800.webp" srcset="assets/img/saal-800.webp 800w, assets/img/saal-1332.webp 1332w" sizes="(max-width: 900px) 80vw, 36vw" width="1332" height="2000" loading="lazy" alt="Tanisha im apricotfarbenen Kleid singt mit geschlossenen Augen in einem Saal mit weißem Stuck.">
+      </figure>
+      <div class="melodie-texte">
+        <div class="stimmung s-a">
+          <h2>Bei der Trauung steht eure Geschichte im Mittelpunkt.</h2>
+          <p>Eure Wünsche, eure Worte, eure Gefühle. Die Musik berührt und trägt den Moment, genau so, wie es sich für euch richtig anfühlt.</p>
+        </div>
+        <div class="stimmung s-b">
+          <h2>Beim Sektempfang darf alles leichter werden.</h2>
+          <p>Modern, locker, mit einem Hauch Boho. Keine klassischen Liebeslieder, sondern Songs für das, was gerade passiert: Zwei Menschen haben sich entschieden, und alle feiern mit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preise -->
+  <section id="preise" data-bg="#F49A67" data-ink="#2B1A27" data-line="#2B1A27" data-y="0.5" data-gap="22" data-amp="40" data-alpha="0.12" data-notes="0.12">
+    <p class="laufband" aria-hidden="true"><span>Standesamt <i>Freie Trauung</i> Kirche <i>Sektempfang</i> Firmenevent <i>Taufe</i> Standesamt <i>Freie Trauung</i> Kirche <i>Sektempfang</i></span></p>
+    <div class="preise-kopf">
+      <h2>Begleitungen und Preise</h2>
+      <p>Meine eigene, hochwertige Technik ist immer dabei. So könnt ihr euch ganz auf eure Momente konzentrieren, ob im geschlossenen Raum oder auf der Wiese ohne Strom.</p>
+    </div>
+    <ul class="preisliste">
+      <li>
+        <div><h3>Eure Trauung</h3><p>Standesamtlich, frei oder kirchlich, mit 1 bis 3 Liedern nach euren Wünschen und passend zur Dauer.</p></div>
+        <p class="preis"><span data-zahl="300">300</span>&nbsp;€*</p>
+        <p class="zusatz">Jedes weitere Lied 25 €</p>
+      </li>
+      <li>
+        <div><h3>Euer Sektempfang</h3><p>Eine Stunde Gesang nach einer meiner Sektempfang-Playlists, auch für Firmenevents und andere Feiern.</p></div>
+        <p class="preis"><span data-zahl="450">450</span>&nbsp;€*</p>
+        <p class="zusatz">Jede weitere halbe Stunde 75 €</p>
+      </li>
+      <li class="beides">
+        <div><h3>Trauung und Sektempfang</h3><p>1 bis 3 Lieder bei der Trauung und danach eine Stunde beim Sektempfang.</p></div>
+        <p class="preis"><span data-zahl="550">550</span>&nbsp;€*</p>
+        <p class="zusatz">200 € weniger als beides einzeln</p>
+      </li>
+    </ul>
+    <div class="preise-fuss">
+      <p>Eine Taufe oder ein anderer Anlass? Schreibt mir, wir finden gemeinsam ein passendes Angebot.</p>
+      <p class="fussnote">*Fahrtkosten im Umkreis von 35 km um 79112 Freiburg sind enthalten. Jeder weitere Kilometer kostet 0,30 €.</p>
+    </div>
+  </section>
+
+  <!-- Stimmen: Laternen in der Abenddämmerung -->
+  <section id="stimmen" data-bg="#2A1526" data-ink="#FFF4E2" data-line="#E8B4A8" data-y="0.5" data-gap="24" data-amp="90" data-alpha="0.3" data-notes="0.12">
+    <blockquote class="zitat">
+      <p>„eine der besten Entscheidungen überhaupt!“</p>
+      <footer>B + A über Tanisha bei ihrer Hochzeitsfeier</footer>
+    </blockquote>
+    <h2 class="stimmen-titel">Was meine Brautpaare erzählen</h2>
+    <ul class="laternen">
+      <li>
+        <img src="assets/img/laterne-sl.webp" width="360" height="366" alt="" loading="lazy">
+        <div><h3>S + L, freie Trauung</h3><p>Alle Liedwünsche wurden erfüllt, der Auftritt war sicher und gefühlvoll. Wenn die beiden heute an ihre Trauung denken, gehört die Musik fest dazu.</p></div>
+      </li>
+      <li>
+        <img src="assets/img/laterne-kl.webp" width="360" height="366" alt="" loading="lazy">
+        <div><h3>K + L, Hochzeitsfeier</h3><p>Tanisha hat die emotionalen Momente getragen. Das Paar beschreibt sie als nett, engagiert und unkompliziert und empfiehlt sie wärmstens weiter.</p></div>
+      </li>
+      <li>
+        <img src="assets/img/laterne-mt.webp" width="360" height="366" alt="" loading="lazy">
+        <div><h3>M + T, kirchliche Trauung</h3><p>Ein Lied von Ed Sheeran wurde zur bleibenden Erinnerung. Hilfe bei der Songauswahl, immer erreichbar, Mikrofon und Box selbst mitgebracht.</p></div>
+      </li>
+      <li>
+        <img src="assets/img/laterne-ba.webp" width="360" height="366" alt="" loading="lazy">
+        <div><h3>B + A, Hochzeitsfeier</h3><p>Von der ersten Note an waren alle verzaubert. Es gab Gänsehaut, und viele Gäste hatten Tränen in den Augen.</p></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Empfehlungen -->
+  <section id="empfehlungen" data-bg="#351B2E" data-ink="#FFF4E2" data-line="#E8B4A8" data-y="0.5" data-gap="24" data-amp="90" data-alpha="0.12" data-notes="0">
+    <div class="empf-kopf">
+      <h2>Meine liebsten Hochzeitsmenschen</h2>
+      <p>Jede Empfehlung kommt aus eigener Erfahrung. Weitere folgen, zum Beispiel Trauredner, Hennadesign, DJs und Dekoration.</p>
+    </div>
+    <ul class="empf-liste">
+      <li><span>Hochzeitslogos und Papeterie</span><a href="https://www.fluments.com/" rel="noopener">Fluments</a><p>Tina gestaltet Logos und Papeterie sehr detailverliebt und passend zu jedem Paar. Wir haben uns auf ihrer Messe „zweiteliebe“ kennengelernt.</p></li>
+      <li><span>Personalisierte Geschenke</span><a href="https://manufakturzauber.de/ueber-mich/" rel="noopener">ManufakturZauber</a><p>Romina fertigt kreative, individuelle Hochzeitsgeschenke, die lange bleiben.</p></li>
+      <li><span>Videografie</span><a href="https://www.jackygrundigfilms.de/" rel="noopener">Jacky Grundig</a><p>Jacky hat meine eigene Hochzeit gefilmt: ruhig und so unauffällig, dass man sie kaum bemerkt.</p></li>
+      <li><span>Secondhand-Brautmode</span><a href="https://fairheiratet.com/" rel="noopener">Fairheiratet</a><p>Nachhaltiges Konzept, viel Feingefühl und eine Atmosphäre zum Wohlfühlen.</p></li>
+      <li><span>Hochzeitsfotografie</span><a href="https://ersteliebe-fotografie.de/" rel="noopener">Ersteliebe Fotografie</a><p>Jasmin begleitet euch wie eine Freundin und fängt echte Momente ein. Wir haben bei einem Styled-Shooting zusammengearbeitet.</p></li>
+      <li><span>Hochzeitslocation</span><a href="https://freiaemterhof.de/feste-feiern/" rel="noopener">S’Bierhaase Schiere</a><p>Hier haben wir selbst geheiratet: persönliche Betreuung vom ersten Gespräch an und eine wunderschöne Atmosphäre.</p></li>
+      <li><span>Brautmode</span><a href="https://www.brautjubel.de/" rel="noopener">Brautjubel</a><p>Julia berät ruhig, herzlich und ehrlich, mit viel Gefühl für die Wünsche jeder Braut.</p></li>
+    </ul>
+  </section>
+
+  <!-- Die fünf Linien werden zu zwei Ringen -->
+  <section id="ja" class="szene" data-bg="#2A1526" data-ink="#FFF4E2" data-line="#F6C98B" data-y="0.5" data-gap="20" data-amp="0" data-alpha="1" data-notes="0" data-ring="1" data-win="1.3">
+    <div class="buehne ja-buehne">
+      <p class="ja-wort schrift">Ja.</p>
+      <h2>Sagt mir euer Datum.</h2>
+    </div>
+  </section>
+
+  <section id="anfrage" data-bg="#2A1526" data-ink="#FFF4E2" data-line="#F6C98B" data-y="0.5" data-gap="20" data-amp="0" data-alpha="0.16" data-notes="0" data-ring="1">
+    <div class="anfrage-raster">
+      <div>
+        <h2>Fragt euer Hochzeitsdatum an</h2>
+        <p>Ich melde mich so schnell wie möglich, danach verabreden wir unser Kennenlernen. Ich freue mich auf euch.</p>
+        <p><a href="mailto:info@tanishasmelodie.de">info@tanishasmelodie.de</a><br><a href="https://www.instagram.com/tanishasmelodie" rel="noopener">@tanishasmelodie auf Instagram</a></p>
+      </div>
+      <form id="formular">
+        <label>Name, Vorname <input name="name" autocomplete="name" required></label>
+        <label>E-Mail <input type="email" name="email" autocomplete="email" required></label>
+        <label>Datum und Ort der Trauung <input name="termin" required></label>
+        <label>Ein paar Infos zu eurem besonderen Tag <textarea name="infos" rows="4"></textarea></label>
+        <label class="einwilligung"><input type="checkbox" name="ok" required> <span>Ich bin einverstanden, dass diese Daten zur Kontaktaufnahme gespeichert und verarbeitet werden. Die Einwilligung kann ich jederzeit widerrufen.</span></label>
+        <button class="knopf" type="submit">Anfrage per E-Mail vorbereiten</button>
+        <p class="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="fuss">
+  <p>Tanisha Karle, Tanishas Melodie, Im Mohnacker 12, 79112 Freiburg</p>
+  <p><a href="https://www.tanishasmelodie.de/impressum-and-datenschutz/">Impressum und Datenschutz</a></p>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
