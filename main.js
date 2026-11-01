@@ -394,10 +394,11 @@
     onLeaveBack: () => kopf.classList.remove('weg'),
   });
 
-  /* Einmaliger Einstieg: Linien ziehen durch, die Überschrift steigt auf */
+  /* Einmaliger Einstieg: Linien ziehen durch, die Überschrift steigt auf.
+     Er bewegt innere Elemente, damit er sich nicht mit dem Scrollen im Auftakt überschreibt. */
   const start = gsap.timeline({ defaults: { ease: 'power3.out' } });
   start.to({ v: 0 }, { v: 1, duration: 1.8, ease: 'power2.inOut', onUpdate() { intro = this.targets()[0].v; } }, 0)
-    .from('.zeile > span', { yPercent: 112, duration: 1.2, stagger: 0.09 }, 0.15)
+    .from('.zeile .ein', { yPercent: 112, duration: 1.2, stagger: 0.09 }, 0.15)
     .from('.bogen', { y: '12vh', autoAlpha: 0, duration: 1.3 }, 0.3)
     .from('.unterzeile, .ton-tipp', { autoAlpha: 0, duration: 0.9, stagger: 0.1 }, 0.9)
     .from('.kopf, .ton', { autoAlpha: 0, duration: 0.9 }, 1);
@@ -422,7 +423,7 @@
     /* Auftakt */
     const auf = gsap.timeline({ scrollTrigger: { trigger: '#auftakt', start: 'top top', end: 'bottom bottom', scrub: true, invalidateOnRefresh: true } });
     auf.to('.h-a .zeile > span', { yPercent: -110, stagger: 0.02, duration: 0.2, ease: 'power2.in' }, 0)
-      .to('.unterzeile, .ton-tipp', { autoAlpha: 0, duration: 0.1 }, 0)
+      .to('.unter', { autoAlpha: 0, duration: 0.1 }, 0)
       .fromTo('.bogen', { clipPath: () => (gross ? 'inset(17% 7% 0% 57% round 22vw 22vw 0px 0px)' : `inset(${bogenOben}% 14% 0% 14% round 36vw 36vw 0px 0px)`) },
         { clipPath: 'inset(0% 0% 0% 0% round 0vw 0vw 0px 0px)', duration: 0.55, ease: 'power2.inOut' }, 0.05)
       .fromTo('.bogen img', { x: gross ? '26vw' : 0, y: () => (gross ? 0 : `${bogenOben - 18}vh`), scale: 1.16 }, { x: 0, y: 0, scale: 1, duration: 0.55, ease: 'power2.inOut' }, 0.05)
