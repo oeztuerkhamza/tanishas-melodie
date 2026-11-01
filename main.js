@@ -297,12 +297,19 @@
     zeichnen(0, scrollY);
   }
 
+  /* ---------- Texte, die erst im Skript entstehen ---------- */
+  const T = {
+    de: { spielen: (t) => `${t} abspielen (lädt ein Video von YouTube)`, name: 'Name', mail: 'E-Mail', termin: 'Datum und Ort', betreff: 'Anfrage Hochzeit: ', status: 'Euer E-Mail-Programm öffnet sich mit der fertigen Anfrage. Falls nicht, schreibt direkt an info@tanishasmelodie.de.' },
+    en: { spielen: (t) => `Play ${t} (loads a video from YouTube)`, name: 'Name', mail: 'Email', termin: 'Date and place', betreff: 'Wedding enquiry: ', status: 'Your email program will open with the finished request. If it doesn’t, write directly to info@tanishasmelodie.de.' },
+    fr: { spielen: (t) => `Lire ${t} (charge une vidéo depuis YouTube)`, name: 'Nom', mail: 'E-mail', termin: 'Date et lieu', betreff: 'Demande de mariage : ', status: 'Votre messagerie s’ouvre avec la demande prête à partir. Sinon, écrivez directement à info@tanishasmelodie.de.' },
+  }[document.documentElement.lang];
+
   /* ---------- Hörproben: Video erst nach Klick laden ---------- */
   $$('.video').forEach((v) => {
     const knopf = document.createElement('button');
     knopf.type = 'button';
     knopf.className = 'spielen';
-    knopf.setAttribute('aria-label', `${v.dataset.titel} abspielen (lädt ein Video von YouTube)`);
+    knopf.setAttribute('aria-label', T.spielen(v.dataset.titel));
     knopf.innerHTML = '<span><svg viewBox="0 0 20 24" aria-hidden="true"><path d="M0 0l20 12L0 24z" fill="currentColor"/></svg></span>';
     knopf.addEventListener('click', () => {
       const f = document.createElement('iframe');
@@ -321,9 +328,9 @@
   $('#formular').addEventListener('submit', (e) => {
     e.preventDefault();
     const d = new FormData(e.target);
-    const text = `Name: ${d.get('name')}\nE-Mail: ${d.get('email')}\nDatum und Ort: ${d.get('termin')}\n\n${d.get('infos')}`;
-    location.href = `mailto:info@tanishasmelodie.de?subject=${encodeURIComponent('Anfrage Hochzeit: ' + d.get('termin'))}&body=${encodeURIComponent(text)}`;
-    $('.status').textContent = 'Euer E-Mail-Programm öffnet sich mit der fertigen Anfrage. Falls nicht, schreibt direkt an info@tanishasmelodie.de.';
+    const text = `${T.name}: ${d.get('name')}\n${T.mail}: ${d.get('email')}\n${T.termin}: ${d.get('termin')}\n\n${d.get('infos')}`;
+    location.href = `mailto:info@tanishasmelodie.de?subject=${encodeURIComponent(T.betreff + d.get('termin'))}&body=${encodeURIComponent(text)}`;
+    $('.status').textContent = T.status;
   });
 
   /* ---------- Menü ---------- */

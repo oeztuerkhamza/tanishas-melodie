@@ -9,6 +9,9 @@
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#D8E2E3">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='12' cy='24' rx='7' ry='5' fill='%232B1A27' transform='rotate(-20 12 24)'/%3E%3Crect x='17.5' y='4' width='2' height='20' fill='%232B1A27'/%3E%3C/svg%3E">
+<link rel="alternate" hreflang="de" href="https://oeztuerkhamza.github.io/tanishas-melodie/">
+<link rel="alternate" hreflang="en" href="https://oeztuerkhamza.github.io/tanishas-melodie/en/">
+<link rel="alternate" hreflang="fr" href="https://oeztuerkhamza.github.io/tanishas-melodie/fr/">
 <link rel="preload" href="assets/fonts/bodoni-moda-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/empore-1500.webp" as="image">
@@ -31,6 +34,7 @@
     <a href="#ueber">Über mich</a>
     <a href="#preise">Preise</a>
     <a href="#empfehlungen">Empfehlungen</a>
+    <span class="sprachen" role="group" aria-label="Sprache wählen"><a href="./" hreflang="de" lang="de" aria-label="Deutsch" aria-current="true">DE</a><a href="en/" hreflang="en" lang="en" aria-label="English">EN</a><a href="fr/" hreflang="fr" lang="fr" aria-label="Français">FR</a></span>
   </nav>
   <a class="knopf knopf-klein" href="#anfrage">Datum anfragen</a>
 </header>
@@ -297,7 +301,7 @@
         <label>E-Mail <input type="email" name="email" autocomplete="email" required></label>
         <label>Datum und Ort der Trauung <input name="termin" required></label>
         <label>Ein paar Infos zu eurem besonderen Tag <textarea name="infos" rows="4"></textarea></label>
-        <label class="einwilligung"><input type="checkbox" name="ok" required> <span>Ich bin einverstanden, dass diese Daten zur Kontaktaufnahme gespeichert und verarbeitet werden. Die Einwilligung kann ich jederzeit widerrufen.</span></label>
+        <label class="einwilligung"><input type="checkbox" name="ok" required> <span>Ich bin einverstanden, dass diese Daten zur Kontaktaufnahme gespeichert und verarbeitet werden. Die Einwilligung kann ich jederzeit widerrufen. <a href="datenschutz.html">Mehr zum Datenschutz</a></span></label>
         <button class="knopf" type="submit">Anfrage per E-Mail vorbereiten</button>
         <p class="status" role="status"></p>
       </form>
@@ -307,7 +311,8 @@
 
 <footer class="fuss">
   <p>Tanisha Karle, Tanishas Melodie, Im Mohnacker 12, 79112 Freiburg</p>
-  <p><a href="https://www.tanishasmelodie.de/impressum-and-datenschutz/">Impressum und Datenschutz</a></p>
+  <p class="fuss-links"><a href="impressum.html">Impressum</a> <a href="datenschutz.html">Datenschutz</a></p>
+  <span class="sprachen" role="group" aria-label="Sprache wählen"><a href="./" hreflang="de" lang="de" aria-label="Deutsch" aria-current="true">DE</a><a href="en/" hreflang="en" lang="en" aria-label="English">EN</a><a href="fr/" hreflang="fr" lang="fr" aria-label="Français">FR</a></span>
 </footer>
 
 <script src="assets/vendor/gsap.min.js"></script>

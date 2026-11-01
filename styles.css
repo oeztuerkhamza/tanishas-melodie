@@ -290,3 +290,40 @@ form .knopf { justify-self: start; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Sprachwahl */
+.sprachen { display: inline-flex; gap: .55em; font-size: .95rem; align-items: center; }
+.sprachen a { text-decoration: none; padding: 6px 2px; opacity: .62; }
+.sprachen a:hover, .sprachen a:focus-visible { opacity: 1; }
+.sprachen a[aria-current] { opacity: 1; text-decoration: underline; }
+#navigation .sprachen { margin-left: clamp(4px, 1vw, 14px); }
+.fuss-links { display: flex; gap: 1.4em; }
+
+/* Rechtsseiten */
+.recht .kopf { position: absolute; }
+.recht-inhalt { max-width: 46rem; margin: 0 auto; padding: clamp(110px, 18vh, 170px) var(--rand) var(--abstand); }
+.recht-inhalt h1 { font-size: clamp(3rem, 7vw, 5.5rem); margin: .3em 0 .5em; }
+.recht-inhalt h2 { font-size: clamp(1.5rem, 2.4vw, 2.1rem); line-height: 1.15; margin: 1.7em 0 .5em; }
+.recht-inhalt h3 { font-size: clamp(1.2rem, 1.7vw, 1.45rem); margin: 1.2em 0 .3em; }
+.recht-inhalt p + p { margin-top: .8em; }
+.recht-hinweis { font-size: 1rem; }
+@media (max-width: 900px) {
+  #navigation .sprachen { margin: 10px 0 0; font-family: var(--sans); font-size: 1.05rem; gap: 1em; }
+}
+@media (min-width: 901px) and (max-width: 1120px) {
+  .kopf { gap: 12px; }
+  #navigation { gap: 12px; font-size: .875rem; }
+  .sprachen { font-size: .875rem; }
+  .knopf-klein { font-size: .875rem; padding: .65em .95em; }
+}
+@media (min-width: 901px) {
+  html[lang="fr"] h1 { font-size: clamp(3.1rem, 8.5vw, 9.25rem); }
+}
+@media (min-width: 901px) and (max-width: 980px) {
+  #navigation { gap: 9px; font-size: .8125rem; }
+  .sprachen { font-size: .8125rem; gap: .4em; }
+  .knopf-klein { font-size: .8125rem; }
+}
+@media (max-width: 360px) {
+  .knopf-klein { display: none; }
+}
