@@ -1,7 +1,6 @@
-@font-face { font-family: "Bodoni Moda"; src: url(assets/fonts/bodoni-moda-latin-opsz-normal.woff2) format("woff2"); font-weight: 400 900; font-style: normal; font-display: swap; }
-@font-face { font-family: "Bodoni Moda"; src: url(assets/fonts/bodoni-moda-latin-opsz-italic.woff2) format("woff2"); font-weight: 400 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Lora"; src: url(assets/fonts/lora-latin-wght-normal.woff2) format("woff2"); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Lora"; src: url(assets/fonts/lora-latin-wght-italic.woff2) format("woff2"); font-weight: 400 700; font-style: italic; font-display: swap; }
 @font-face { font-family: "Hanken Grotesk"; src: url(assets/fonts/hanken-grotesk-latin-wght-normal.woff2) format("woff2"); font-weight: 100 900; font-display: swap; }
-@font-face { font-family: "Ms Madi"; src: url(assets/fonts/ms-madi-latin-400-normal.woff2) format("woff2"); font-display: swap; }
 
 :root {
   --bg: #D8E2E3;
@@ -11,9 +10,8 @@
   --aprikose: #F49A67;
   --rand: clamp(20px, 5vw, 88px);
   --abstand: clamp(90px, 15vh, 190px);
-  --serif: "Bodoni Moda", "Didot", Georgia, serif;
+  --serif: "Lora", Georgia, serif;
   --sans: "Hanken Grotesk", system-ui, sans-serif;
-  --hand: "Ms Madi", "Segoe Script", cursive;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -33,10 +31,10 @@ ul, ol { list-style: none; }
 a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
 :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 2px; }
 
-h1, h2 { font-family: var(--serif); font-weight: 400; line-height: 1.02; letter-spacing: -0.015em; text-wrap: balance; }
-h2 { font-size: clamp(2.5rem, 5.6vw, 5.75rem); }
+h1, h2 { font-family: var(--serif); font-weight: 400; line-height: 1.08; letter-spacing: -0.015em; text-wrap: balance; }
+h2 { font-size: clamp(2.25rem, 4.8vw, 5rem); }
 h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.5rem, 2.4vw, 2.25rem); line-height: 1.12; }
-.schrift { font-family: var(--hand); font-size: clamp(3.25rem, 7vw, 7rem); line-height: 1; }
+.schrift { font-family: var(--serif); font-style: italic; font-size: clamp(2.75rem, 5.6vw, 5.75rem); line-height: 1.08; letter-spacing: -0.015em; }
 
 .skip { position: fixed; left: 12px; top: -60px; z-index: 50; background: var(--pflaume); color: var(--kerze); padding: 10px 16px; }
 .skip:focus { top: 12px; }
@@ -81,13 +79,13 @@ main { position: relative; z-index: 1; }
 .bogen img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; }
 .bogen-schatten { position: absolute; inset: 0; background: linear-gradient(to top, rgba(31, 14, 8, .78), rgba(31, 14, 8, 0) 62%); }
 .auftakt-text { position: relative; padding: 110px var(--rand) 60px; }
-h1 { font-size: clamp(3.1rem, 9.4vw, 10.25rem); line-height: 0.98; }
-.zeile { display: block; overflow: hidden; padding-bottom: .08em; margin-bottom: -.08em; }
+h1 { font-size: clamp(2.9rem, 7.8vw, 8.5rem); line-height: 1.04; }
+.zeile { display: block; overflow: hidden; padding-bottom: .14em; margin-bottom: -.14em; }
 .zeile > span { display: block; }
 .h-a, .h-b { display: block; }
 .h-b { margin-top: .3em; }
 .unterzeile { margin-top: 1.1em; max-width: 44ch; line-height: 1.4; }
-.ton-tipp { margin-top: .5em; max-width: 58ch; font-size: .95rem; line-height: 1.4; opacity: .75; }
+.ton-tipp { margin-top: .5em; max-width: 58ch; font-size: 1rem; line-height: 1.45; }
 
 .motion .bogen { position: absolute; inset: 0; aspect-ratio: auto; clip-path: inset(17% 7% 0% 57% round 22vw 22vw 0px 0px); will-change: clip-path; }
 .motion .bogen img { will-change: transform; }
@@ -98,7 +96,7 @@ h1 { font-size: clamp(3.1rem, 9.4vw, 10.25rem); line-height: 0.98; }
 /* Willkommen */
 #willkommen, #ablauf, #ueber, #preise, #stimmen, #empfehlungen, #anfrage { padding: var(--abstand) var(--rand); }
 .spalten { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(30px, 6vw, 110px); align-items: center; }
-.willkommen-text .schrift { font-size: clamp(3rem, 5.4vw, 5.5rem); }
+.willkommen-text .schrift { font-size: clamp(2.5rem, 4.6vw, 4.75rem); }
 .vorlesen { font-family: var(--serif); font-size: clamp(1.9rem, 3.5vw, 3.5rem); line-height: 1.16; margin: .55em 0 1em; }
 .vorlesen .wort { transition: none; }
 .bogen-bild { overflow: hidden; border-radius: 50vw 50vw 0 0; }
@@ -112,9 +110,9 @@ h1 { font-size: clamp(3.1rem, 9.4vw, 10.25rem); line-height: 0.98; }
 .takte { margin-top: clamp(40px, 8vh, 90px); }
 .takte li { position: relative; padding: clamp(26px, 5vh, 54px) 0 clamp(26px, 5vh, 54px) clamp(22px, 3vw, 44px); border-left: 1px solid currentColor; max-width: 44ch; }
 .takte li + li { margin-top: 0; }
-.takt-nr { display: block; font-size: .95rem; margin-bottom: .5em; }
+.takt-nr { display: block; font-size: 1rem; margin-bottom: .5em; }
 .takte h3 { margin-bottom: .35em; }
-.motion .takte li { opacity: .28; transition: opacity .5s; }
+.motion .takte li { opacity: .5; transition: opacity .5s; }
 .motion .takte li.an { opacity: 1; }
 
 /* Hörproben */
@@ -132,11 +130,11 @@ h1 { font-size: clamp(3.1rem, 9.4vw, 10.25rem); line-height: 0.98; }
 .spielen:hover span, .spielen:focus-visible span { scale: 1.12; }
 .spielen svg { width: 34%; margin-left: 6%; }
 .lied-text { margin-top: 1em; }
-.lied-text h3 { font-size: clamp(2.4rem, 6.4vw, 6.75rem); font-weight: 400; line-height: 1; letter-spacing: -0.015em; }
+.lied-text h3 { font-size: clamp(2.2rem, 5.2vw, 5.5rem); font-weight: 400; line-height: 1.06; letter-spacing: -0.015em; }
 .lied-text p { margin-top: .7em; max-width: 36ch; }
 .motion .lied-text h3 { text-shadow: 0 0 28px rgba(45, 26, 11, .9), 0 0 6px rgba(45, 26, 11, .6); }
 .tafel-ende { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
-.video-hinweis { padding-top: 40px; font-size: .95rem; opacity: .8; }
+.video-hinweis { padding-top: 40px; font-size: 1rem; }
 
 @media (min-width: 901px) {
   .motion .quer { height: 480vh; position: relative; }
@@ -156,7 +154,7 @@ h1 { font-size: clamp(3.1rem, 9.4vw, 10.25rem); line-height: 0.98; }
 .ueber-raster { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(30px, 6vw, 110px); position: relative; align-items: start; }
 .ueber-bild { position: sticky; top: 10vh; overflow: hidden; border-radius: 50vw 50vw 0 0; aspect-ratio: 3 / 4.1; }
 .ueber-bild img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
-.name-gross { position: absolute; left: 0; right: 0; bottom: 5%; text-align: center; font-size: clamp(5rem, 11vw, 11.5rem); color: var(--kerze); pointer-events: none; }
+.name-gross { position: absolute; left: 0; right: 0; bottom: 5%; text-align: center; font-size: clamp(3.5rem, 7.8vw, 8.5rem); color: var(--kerze); pointer-events: none; }
 .ueber-text { padding-top: 6vh; }
 .ueber-text p { max-width: 46ch; margin-top: 1.3em; }
 .ueber-text .jahr { font-family: var(--serif); font-size: clamp(1.9rem, 3.4vw, 3.4rem); line-height: 1.14; max-width: 19ch; margin: 1.3em 0; }
@@ -183,7 +181,7 @@ h1 { font-size: clamp(3.1rem, 9.4vw, 10.25rem); line-height: 0.98; }
 .motion .s-b { visibility: hidden; }
 
 /* Preise */
-.laufband { font-family: var(--serif); font-size: clamp(3.5rem, 11vw, 12rem); line-height: 1.1; white-space: nowrap; overflow: hidden; margin: 0 calc(var(--rand) * -1) var(--abstand); }
+.laufband { font-family: var(--serif); font-size: clamp(3rem, 9vw, 10rem); line-height: 1.1; white-space: nowrap; overflow: hidden; margin: 0 calc(var(--rand) * -1) var(--abstand); }
 .laufband span { display: inline-block; padding-left: var(--rand); will-change: transform; }
 .laufband i { padding: 0 .28em; }
 .preise-kopf { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 90px); align-items: end; }
@@ -193,7 +191,7 @@ h1 { font-size: clamp(3.1rem, 9.4vw, 10.25rem); line-height: 0.98; }
 .preisliste li::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px; background: currentColor; transform-origin: left; transform: scaleX(var(--strich, 1)); }
 .preisliste h3 { font-size: clamp(1.75rem, 3.4vw, 3.25rem); margin-bottom: .35em; }
 .preisliste div p { max-width: 42ch; }
-.preis { font-family: var(--serif); font-size: clamp(3.2rem, 7.5vw, 7.75rem); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums; white-space: nowrap; }
+.preis { font-family: var(--serif); font-size: clamp(3rem, 6.4vw, 6.5rem); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: lining-nums; white-space: nowrap; }
 .zusatz { font-size: 1rem; }
 .beides .preis { font-style: italic; }
 .preise-fuss { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 90px); padding-top: clamp(30px, 5vh, 56px); border-top: 1px solid currentColor; }
@@ -202,7 +200,7 @@ h1 { font-size: clamp(3.1rem, 9.4vw, 10.25rem); line-height: 0.98; }
 
 /* Stimmen */
 .zitat { padding: 8vh 0 var(--abstand); }
-.zitat p { font-family: var(--serif); font-style: italic; font-size: clamp(3rem, 9.4vw, 10rem); line-height: 1; letter-spacing: -0.02em; max-width: 13ch; }
+.zitat p { font-family: var(--serif); font-style: italic; font-size: clamp(2.75rem, 7.4vw, 8rem); line-height: 1.08; letter-spacing: -0.02em; max-width: 14ch; }
 .zitat footer { margin-top: 1.4em; }
 .stimmen-titel { font-size: clamp(2rem, 3.6vw, 3.5rem); margin-bottom: clamp(40px, 8vh, 90px); }
 .laternen { display: grid; grid-template-columns: repeat(12, 1fr); row-gap: clamp(50px, 10vh, 120px); }
@@ -244,7 +242,7 @@ textarea { resize: vertical; }
 form .knopf { justify-self: start; }
 .status { min-height: 1.6em; }
 
-.fuss { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 30px; padding: 28px var(--rand) 90px; font-size: .95rem; color: var(--ink); border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); }
+.fuss { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 30px; padding: 28px var(--rand) 90px; font-size: 1rem; color: var(--ink); border-top: 1px solid color-mix(in srgb, currentColor 30%, transparent); }
 
 @media (max-width: 900px) {
   .kopf { flex-wrap: wrap; column-gap: 12px; }
@@ -268,7 +266,7 @@ form .knopf { justify-self: start; }
   .garten { max-width: 84%; margin-left: auto; }
   .ablauf-bild { position: relative; top: 0; height: 60vh; }
   .ueber-bild { position: relative; top: 0; }
-  .name-gross { font-size: 25vw; }
+  .name-gross { font-size: 18vw; }
   .ueber-text { padding-top: 0; }
 
   .motion .melodie-buehne { grid-template-columns: 1fr; gap: 20px; grid-template-rows: 38svh 1fr; padding-top: 80px; padding-bottom: 70px; }
@@ -293,7 +291,7 @@ form .knopf { justify-self: start; }
 
 /* Sprachwahl */
 .sprachen { display: inline-flex; gap: .55em; font-size: .95rem; align-items: center; }
-.sprachen a { text-decoration: none; padding: 6px 2px; opacity: .62; }
+.sprachen a { text-decoration: none; padding: 6px 2px; opacity: .8; }
 .sprachen a:hover, .sprachen a:focus-visible { opacity: 1; }
 .sprachen a[aria-current] { opacity: 1; text-decoration: underline; }
 #navigation .sprachen { margin-left: clamp(4px, 1vw, 14px); }
@@ -317,9 +315,10 @@ form .knopf { justify-self: start; }
   .knopf-klein { font-size: .875rem; padding: .65em .95em; }
 }
 @media (min-width: 901px) {
-  html[lang="fr"] h1 { font-size: clamp(3.1rem, 8.5vw, 9.25rem); }
+  html[lang="fr"] h1 { font-size: clamp(2.9rem, 7.2vw, 7.75rem); }
 }
 @media (min-width: 901px) and (max-width: 980px) {
+  .logo { width: 96px; }
   #navigation { gap: 9px; font-size: .8125rem; }
   .sprachen { font-size: .8125rem; gap: .4em; }
   .knopf-klein { font-size: .8125rem; }
